@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulador de Hábitat Espacial</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="ui">
+    <h2>🚀 Constructor de Base Marciana</h2>
+
+    <label for="moduloSelect">Seleccionar módulo:</label>
+    <select id="moduloSelect">
+      <option value="">-- elige uno --</option>
+      <option value="vivienda">Vivienda</option>
+      <option value="energia">Energía</option>
+      <option value="comunicacion">Comunicación</option>
+      <option value="control">Control y Mantenimiento</option>
+      <option value="medico">Médico</option>
+      <option value="laboratorio">Laboratorio</option>
+      <option value="moxie">Producción O₂</option>
+      <option value="invernadero">Invernadero</option>
+      <option value="logistica">Almacenamiento</option>
+      <option value="recreacion">Recreación</option>
+      <option value="transporte">Transporte</option>
+      <option value="manufactura">Manufactura</option>
+      <option value="visitantes">Visitantes</option>
+    </select>
+
+    <div>
+      <label>Forma:</label>
+      <button class="forma" data-forma="cubo">Cúbico</button>
+      <button class="forma" data-forma="cilindro">Cilíndrico</button>
+      <button class="forma" data-forma="semiesfera">Semiesférico</button>
+    </div>
+
+    <div>
+      <label for="numPersonas">👩‍🚀 Cantidad de personas:</label>
+      <input type="number" id="numPersonas" min="1" value="4" style="width:60px;">
+    </div>
+
+    <button id="agregarModulo">Agregar módulo</button>
+    <button id="borrarSeleccion">Borrar último</button>
+    <button id="actualizar">Actualizar</button>
+
+    <h3>📊 Información</h3>
+    <div id="infoModulo"></div>
+    <p>Efectividad total: <span id="efectividadTotal">0%</span></p>
+  </div>
+
+  <canvas id="canvasJuego"></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>
